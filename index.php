@@ -20,7 +20,7 @@
          <h3><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
       </div>
     </div>
-	  <?php $i++; endwhile; ?>
+	    <?php $i++; endwhile; ?>
 	  <?php endif; ?>
   </div>
 
@@ -50,9 +50,9 @@
 <span class="post-date published" datetime="<?php the_time('c'); ?>"> <?php the_time(get_option('date_format')); ?></span>
 </div>
 <div class="post-image-wrap">
-	
+
 <img alt="Essential Tips for Portrait Photographers" class="post-thumb" src="<?=catch_that_image()?>">
-	
+
 </div>
 <div class="rotate">
 <div class="cat-links">
@@ -75,8 +75,8 @@
 </div>
 <p class="post-snippet">
 <?php
-echo get_content();															  
-?>																	   
+echo get_content();
+?>
 </p>
 <a class="read-more" href="<?php the_permalink() ?>">Read more</a>
 </div>
@@ -88,17 +88,17 @@ echo get_content();
 <?php if (show_posts_link_nav()): ?>
 		<nav><?php next_posts_link('Older'); delim_posts_link(); previous_posts_link('Newer') ?></nav>
 	<?php endif; ?>
-		
-		
+
+
     </div>
 
     <div class="col-sm-4">
-		
+
 	<?php get_sidebar(); ?>
-		
-      
+
+
     </div>
 </div>
-</div>	  
-	  
+</div>
+
 <?php get_footer(); ?>

@@ -14,7 +14,6 @@ define('THEME_URI', $theme_data->get('ThemeURI'));
 define('THEME_NAME', $theme_data->get('Name'));
 define('THEME_VERSION', trim($theme_data->get('Version')));
 define('THEME_DESCRIPTION', trim($theme_data->get('Description')));
-require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 
 // estsb theme options
 
@@ -241,7 +240,7 @@ if ( ! function_exists( 'estsb_body_class' ) ) {
 		// Filter the unwanted classes
 		$wp_class_list = array_intersect($wp_class_list, $whitelist);
 		$estsb_body_class = $wp_class_list;
-		
+
 		// Output allowed classes
 		return array_merge($wp_class_list, (array) $estsb_body_class);
 	}
@@ -701,9 +700,6 @@ if ( ! function_exists( 'estsb_title' ) ) {
 
 	add_filter( 'wp_title', 'estsb_title', 10, 2 );
 }
-register_nav_menus( array(
-	'primary' => __( 'Primary Menu', 'THEMENAME' ),
-) );
 
 function catch_that_image() {
   global $post,$posts;
@@ -712,7 +708,7 @@ function catch_that_image() {
   ob_end_clean();
   $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
   $first_img = $matches[1][0];
-	
+
   return !empty($first_img) ? $first_img:"/wp-content/themes/estsb/img/default.png";
 }
 function   get_content(){
@@ -720,20 +716,11 @@ function   get_content(){
 	ob_start();
     ob_end_clean();
 	$content = $post->post_content;
-	$content = preg_replace("/<img[^>]+\>/i", " ", $content);          
+	$content = preg_replace("/<img[^>]+\>/i", " ", $content);
 	$content = apply_filters('the_content', $content);
 	$content = str_replace(']]>', ']]>', $content);
 	return substr($content,0,50)."....";
 }
-function wpb_custom_new_menu() {
-  register_nav_menus(
-    array(
-      'my-custom-menu' => __( 'My Custom Menu' ),
-      'extra-menu' => __( 'Extra Menu' )
-    )
-  );
-}
-add_action( 'init', 'wpb_custom_new_menu' );
 
 
 

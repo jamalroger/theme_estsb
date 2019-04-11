@@ -68,23 +68,23 @@
 	.shadow {
 		box-shadow:0 0 20px rgba(0,0,0,.25);
         padding-right: 0px;
-        padding-left: 0px; 
-   
+        padding-left: 0px;
+
 	}
 
 </style>
-		
+
 		<?php wp_head(); ?>
 </head>
-	
-	
-	
-	
+
+
+
+
 <body <?php body_class(); ?>>
-	
+
 <div class="container shadow">
 		<header>
-		
+
 <nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
   <div class="container">
 	<!-- Brand and toggle get grouped for better mobile display -->
@@ -93,24 +93,23 @@
 	</button>
 	<a class="navbar-brand" href="#">Navbar</a>
 		<?php
-		wp_nav_menu( array(
-			'theme_location'    => 'primary',
-			'depth'             => 2,
-			'container'         => 'div',
-			'container_class'   => 'collapse navbar-collapse',
-			'container_id'      => 'bs-example-navbar-collapse-1',
-			'menu_class'        => 'nav navbar-nav',
-			'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-			'walker'            => new WP_Bootstrap_Navwalker(),
-		) ); 		
-//      wp_nav_menu( array( 
-//     'theme_location' => 'my-custom-menu', 
-//     'container_class' => 'custom-menu-class' ) ); 
-	  
+		// wp_nav_menu( array(
+		// 	'theme_location'    => 'primary',
+		// 	'depth'             => 2,
+		// 	'container'         => 'div',
+		// 	'container_class'   => 'collapse navbar-collapse',
+		// 	'container_id'      => 'bs-example-navbar-collapse-1',
+		// 	'menu_class'        => 'nav navbar-nav',
+		// 	'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+		// 	'walker'            => new WP_Bootstrap_Navwalker(),
+		// ) );
+//      wp_nav_menu( array(
+//     'theme_location' => 'my-custom-menu',
+//     'container_class' => 'custom-menu-class' ) );
+
 		?>
 	</div>
-				
+
 </nav>
 
 	</header>
-		
