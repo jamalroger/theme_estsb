@@ -6,7 +6,7 @@ An achingly simple WordPress theme without all the usual cruft.
 
 ## About
 
-estsb is an exercise in publishing template minimalism.
+stsb is an exercise in publishing template minimalism.
 
 Why create yet another theme? Well, as clean and stripped down as some themes are, we wanted to prune things a bit further.
 
