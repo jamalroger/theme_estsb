@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-
 <div id="demo" class="carousel slide" data-ride="carousel">
 
   <!-- Indicators -->
@@ -9,7 +8,6 @@
     <li data-target="#demo" data-slide-to="1"></li>
     <li data-target="#demo" data-slide-to="2"></li>
   </ul>
-
   <!-- The slideshow -->
   <div class="carousel-inner">
 	  <?php if (have_posts()) :  ?>
@@ -31,9 +29,8 @@
   <a class="carousel-control-next" href="#demo" data-slide="next">
     <span class="carousel-control-next-icon"></span>
   </a>
-
+  
 </div>
-
 
 
 <div style="margin-top:30px">

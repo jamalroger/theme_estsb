@@ -709,7 +709,7 @@ function catch_that_image() {
   $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
   $first_img = $matches[1][0];
 
-  return !empty($first_img) ? $first_img:"/wp-content/themes/estsb/img/default.png";
+  return !empty($first_img) ? $first_img:get_stylesheet_directory_uri()."/img/default.jpg";
 }
 function   get_content(){
    global $post, $posts;
@@ -722,6 +722,10 @@ function   get_content(){
 	return substr($content,0,50)."....";
 }
 
+function wpb_custom_new_menu() {
+  register_nav_menu('my-custom-menu',__( 'Menu top' ));
+}
+add_action( 'init', 'wpb_custom_new_menu' );
 
 
 ?>

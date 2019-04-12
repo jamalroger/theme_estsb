@@ -14,7 +14,8 @@
 			foreach ($options as $value) {
 				if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else {                     $$value['id'] = get_option( $value['id'] ); }
 			}
-		?>
+		?> 
+		
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen"/>
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
@@ -28,7 +29,7 @@
 			/* Make the image fully responsive */
 			.carousel-inner img {
 				width: 100%;
-				height: 100%;
+				height: 360px;
 			}
 			  .td-block-title-wrap {
     position: relative;
@@ -84,32 +85,28 @@
 
 <div class="container shadow">
 		<header>
+			<div class="container">
+			    
+				<a href="/"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" max-with="100%" height="100px"></a>
+				 <div class="leftm">
+						
+								<?php get_search_form(); ?>	  
+				   <a href="#">FAQ</a></li>
 
-<nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
-  <div class="container">
-	<!-- Brand and toggle get grouped for better mobile display -->
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-	<a class="navbar-brand" href="#">Navbar</a>
-		<?php
-		// wp_nav_menu( array(
-		// 	'theme_location'    => 'primary',
-		// 	'depth'             => 2,
-		// 	'container'         => 'div',
-		// 	'container_class'   => 'collapse navbar-collapse',
-		// 	'container_id'      => 'bs-example-navbar-collapse-1',
-		// 	'menu_class'        => 'nav navbar-nav',
-		// 	'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-		// 	'walker'            => new WP_Bootstrap_Navwalker(),
-		// ) );
-//      wp_nav_menu( array(
-//     'theme_location' => 'my-custom-menu',
-//     'container_class' => 'custom-menu-class' ) );
+				  .<a href="#">Contact</a></li>
+				 
+				    
+					</div>
+			 </div>
+			
+	
+			<div id='cssmenu'>
+					<?php
+					wp_nav_menu( array( 
+						'theme_location' => 'my-custom-menu', 
+						'container_class' => 'custom-menu-class' ) ); 	
+					?>
 
-		?>
-	</div>
-
-</nav>
-
+			</div>
+	
 	</header>

@@ -7,6 +7,11 @@
 
 <?php get_header(); ?>
 
+
+<div class="container" style="margin-top:15px">
+      <div class="row">
+	  <div class="col-sm-8">
+
 <section id="content">
 	<?php if (have_posts()) : ?>
 		<h2><?php printf( 'Tag: %s' , '<span>' . single_tag_title( '', false ) . '</span>' ); ?></h2>
@@ -48,5 +53,16 @@
 	<?php endif; ?>
 </section>
 
+
+</div>
+
+<div class="col-sm-4">
+
 <?php get_sidebar(); ?>
+
+
+</div>
+</div>
+</div>
+
 <?php get_footer(); ?>

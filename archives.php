@@ -10,6 +10,11 @@ Template Name: Archives
 
 <?php get_header(); ?>
 
+
+<div class="container" style="margin-top:15px">
+      <div class="row">
+	  <div class="col-sm-8">
+	  
 <section id="content">
 	<h2>Archives</h2>
 	<ul>
@@ -45,4 +50,10 @@ Template Name: Archives
 	</ul>
 </section>
 
+</div>
+<div class="col-md-4">
+<?php get_sidebar(); ?>
+</div>
+</div>
+</div>
 <?php get_footer(); ?>

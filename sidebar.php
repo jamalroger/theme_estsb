@@ -46,7 +46,16 @@
 		<?php
 			}
 			
-			if ( is_home() || is_page() ) {
+		?>
+	
+	<div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size"> Archive </span></h4></div>
+	<?php
+				// Display a list of monthly archives
+				if ($estsb_archive_count == "1") $archive_count = '1'; else $archive_count = '0';
+				wp_get_archives('show_post_count=' . $archive_count . '&type=monthly');
+	
+				
+		if ( is_home() || is_page() ) {
 				wp_list_bookmarks();
 		?>
 			
@@ -57,45 +66,5 @@
 			}
 			endif;
 		?>
-	<div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size"> Archive </span></h4></div>
-	<?php
-				// Display a list of monthly archives
-				if ($estsb_archive_count == "1") $archive_count = '1'; else $archive_count = '0';
-				wp_get_archives('show_post_count=' . $archive_count . '&type=monthly');
-			?>
 	
 </aside>
-<!-- <aside id="sidebar-2">
-	<?php
-
-		// Sidebar widgets only appear if the plugin is installed and widgets are active
-		if ( ! function_exists('dynamic_sidebar') || ! dynamic_sidebar('sidebar1') ) :
-
-		// Otherwise insert default sidebar elements
-		global $options;
-		foreach ($options as $value) {
-			if (get_option( $value['id'] ) === FALSE) { $$value['id'] = $value['std']; } else { $$value['id'] = get_option( $value['id'] );
-			}
-		}
-				
-		// Display a list of pages
-		if ($estsb_page_depth == "1") $depth = '0'; else $depth = '1';
-		wp_list_pages('depth=' . $depth . '&title_li=<h2>Pages</h2>' );
-
-		// Display a list of categories
-		if ($estsb_category_count == "1") $category_count = '1'; else $category_count = '0';
-		wp_list_categories('show_count=' . $category_count . '&title_li=<h2>Categories</h2>');
-	?>
-		<div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size"> Archive </span></h4></div>
-
-			<?php
-				// Display a list of monthly archives
-				if ($estsb_archive_count == "1") $archive_count = '1'; else $archive_count = '0';
-				wp_get_archives('show_post_count=' . $archive_count . '&type=monthly');
-			?>
-		
-	
-	<?php
-		endif;
-	?>
-</aside> -->

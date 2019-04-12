@@ -7,6 +7,9 @@
 
 <?php get_header(); ?>
 
+<div class="container" style="margin-top:15px">
+      <div class="row">
+	  <div class="col-sm-8">
 <section id="content">
 <?php if (have_posts()) :
 	if (is_category()) { ?>
@@ -60,5 +63,15 @@
 ?>
 </section>
 
+</div>
+
+<div class="col-sm-4">
+
 <?php get_sidebar(); ?>
+
+
+</div>
+</div>
+</div>
+
 <?php get_footer(); ?>
