@@ -7,7 +7,7 @@
 
 // Define theme constants
 
-$theme_name = 'Eestsb';
+$theme_name = 'estsb';
 $theme_data = wp_get_theme($theme_name);
 
 define('THEME_URI', $theme_data->get('ThemeURI'));
@@ -61,7 +61,7 @@ array( "name" => "",
 	"std" => "true"),
 array( "name" => "",
 	"desc" => "HTML may be used to format the footer text.",
-	"id" => $theme_name."_footer_text",
+	"id" => "t_footer_text",
 	"type" => "textarea",
 	"std" => "<p>This text will appear in the footer.</p>"),
 );
@@ -726,6 +726,8 @@ function wpb_custom_new_menu() {
   register_nav_menu('my-custom-menu',__( 'Menu top' ));
 }
 add_action( 'init', 'wpb_custom_new_menu' );
+
+
 
 
 ?>

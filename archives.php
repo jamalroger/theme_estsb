@@ -11,9 +11,9 @@ Template Name: Archives
 <?php get_header(); ?>
 
 
-<div class="container" style="margin-top:15px">
+<div class="container" style="padding-top:15px">
       <div class="row">
-	  <div class="col-sm-8">
+	  <div class="col-md-8">
 	  
 <section id="content">
 	<h2>Archives</h2>
@@ -49,11 +49,14 @@ Template Name: Archives
 		<?php wp_list_categories('style=list&title_li='); ?>
 	</ul>
 </section>
-
 </div>
+<?php 
+// sidebar
+?>
+</strong>
 <div class="col-md-4">
 <?php get_sidebar(); ?>
-</div>
+</div>  
 </div>
 </div>
 <?php get_footer(); ?>

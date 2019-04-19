@@ -22,14 +22,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <!-- 		boostrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://www.jqueryscript.net/demo/Background-Slider-Plugin-jQuery-sliderResponsive/sliderResponsive.css">
+	<script src="https://www.jqueryscript.net/demo/Background-Slider-Plugin-jQuery-sliderResponsive/sliderResponsive.js"></script>	
+	<link rel="stylesheet" type="text/css" href="https://www.cssscript.com/demo/customizable-pure-javascript-calendar-library-jscalendar/jsCalendar.css">
+<link href="https://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+		<!-- jsCalendar -->
+		<script type="text/javascript" src="https://www.cssscript.com/demo/customizable-pure-javascript-calendar-library-jscalendar/jsCalendar.js"></script>
+		
 <style>
 			/* Make the image fully responsive */
 			.carousel-inner img {
 				width: 100%;
-				height: 360px;
+				height: 500px;
 			}
 			  .td-block-title-wrap {
     position: relative;
@@ -42,7 +50,6 @@
     font-size: 14px;
     line-height: 1;
     margin-top: 0;
-    margin-bottom: 26px;
     border-bottom: 2px solid #222222;
 }
 .td-block-title span, .td-block-title a {
@@ -66,13 +73,23 @@
 .block-title, .wpb_tabs .wpb_tabs_nav, .woocommerce div.product .woocommerce-tabs ul.tabs:before {
     border-color: #4db2ec;
 }
-	.shadow {
+.shadow {
 		box-shadow:0 0 20px rgba(0,0,0,.25);
         padding-right: 0px;
         padding-left: 0px;
 
 	}
+.shadow1 {
+        padding-right: 0px;
+        padding-left: 0px;
 
+	} 
+	html {
+		margin-top:0px !important;
+	}
+	.col-md-8,.col-md-4,col-sm-8,.col-sm-4 {
+		position:initial ! important;
+	}
 </style>
 
 		<?php wp_head(); ?>
@@ -83,30 +100,36 @@
 
 <body <?php body_class(); ?>>
 
-<div class="container shadow">
 		<header>
-			<div class="container">
+			<div style="background:linear-gradient(90deg,#00c4cc,#7d2ae8)">
+			<div class="container shadow1">
 			    
-				<a href="/"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" max-with="100%" height="100px"></a>
-				 <div class="leftm">
-						
+				<a href="<?=get_home_url()?>"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" max-with="100%" height="100px"></a>
+				  <div class="leftm">
 								<?php get_search_form(); ?>	  
-				   <a href="#">FAQ</a></li>
-
-				  .<a href="#">Contact</a></li>
-				 
 				    
-					</div>
-			 </div>
-			
-	
-			<div id='cssmenu'>
+					</div> 
+				
+				<div id='cssmenu'>
 					<?php
 					wp_nav_menu( array( 
 						'theme_location' => 'my-custom-menu', 
 						'container_class' => 'custom-menu-class' ) ); 	
 					?>
-
-			</div>
+                 </div>
+				
+				
+			 </div>
+			
 	
+			</div>
+
+			
 	</header>
+	
+
+
+<div class="container shadow">	
+
+	
+	

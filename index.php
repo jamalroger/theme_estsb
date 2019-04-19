@@ -1,41 +1,58 @@
 <?php get_header(); ?>
 
-<div id="demo" class="carousel slide" data-ride="carousel">
-
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
-  </ul>
-  <!-- The slideshow -->
-  <div class="carousel-inner">
-	  <?php if (have_posts()) :  ?>
+	
+<div class="slider" id="slider3">
+	 <?php if (have_posts()) :  ?>
            <?php  $i=0; while (have_posts() && i<3) : the_post(); ?>
-    <div class="carousel-item <?php if($i===0) echo 'active'?>">
-      <img src="<?=catch_that_image()?>" alt="Los Angeles">
-	  <div class="carousel-caption">
-         <h3><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-      </div>
-    </div>
-	    <?php $i++; endwhile; ?>
-	  <?php endif; ?>
+    <div style="background-image:url(<?=catch_that_image();?>)">
+            <span>
+          <h2> <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+      </span>
+        </div>
+	<?php $i++; endwhile; ?>
+	<?php endif; ?>
+	
+        <!-- The Arrows -->
+        <i class="left" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path></svg></i>
+        <i class="right" class="arrows" style="z-index:2; position:absolute;">
+      <svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(100, 100) rotate(180) "></path></svg></i>
+        <!-- Title Bar -->
+        <!--     <span class="titleBar">
+        <h1>I am like a leaf in the wind.</h1> 
+        <p>Watch me soar!</p>
+    </span> -->
   </div>
-
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
+<script>
+$(document).ready(function() {
+  $("#slider1").sliderResponsive({
+  // Using default everything
+    // slidePause: 5000,
+    // fadeSpeed: 800,
+    // autoPlay: "on",
+    // showArrows: "off", 
+    // hideDots: "off", 
+    // hoverZoom: "on", 
+    // titleBarTop: "off"
+  });
   
-</div>
+  $("#slider_est").sliderResponsive({
+    fadeSpeed: 300,
+    autoPlay: "off",
+    showArrows: "on",
+    hideDots: "on"
+  });
+  
+  $("#slider3").sliderResponsive({
+    hoverZoom: "off",
+    hideDots: "on"
+  });
+  
+}); 
+</script>
 
-
-<div style="margin-top:30px">
+<div class="container" style="padding-top:30px">
   <div class="row">
-    <div class="col-sm-8">
+    <div class="col-md-8">
 		<div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size"> Articles</span></h4></div>
 		<?php if (have_posts()) : ?>
   <?php while (have_posts()) : the_post(); ?>
@@ -61,16 +78,10 @@
 </div></div>
 <div class="post-info">
 <h2 class="post-title">
-<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>&#8221;"><?php the_title(); ?></a>
+<a  dir='auto' href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>&#8221;"><?php the_title(); ?></a>
 </h2>
-<div class="post-meta">
-<span class="post-author">
-	<a class="url" href="<?php the_author_meta('user_url') ?>" title="Visit the author&#8217;s site">
-							<?php the_author_meta('display_name'); ?>
-						</a>
-	</span>
-</div>
-<p class="post-snippet">
+
+<p class="post-snippet" dir='auto'>
 <?php
 echo get_content();
 ?>
@@ -79,23 +90,27 @@ echo get_content();
 </div>
 </div>
  <?php  }  ?>
+ <?php edit_post_link('Edit', '<p>', '</p>'); ?>
 <?php endwhile; ?>
-<?php endif; ?>
+<?php endif; ?>			 
+	<?php wp_link_pages(array('before' => '<p>Pages: ', 'after' => '</p>', 'next_or_number' => 'number')); ?>		 
 
+		
 <?php if (show_posts_link_nav()): ?>
 		<nav><?php next_posts_link('Older'); delim_posts_link(); previous_posts_link('Newer') ?></nav>
 	<?php endif; ?>
 
 
     </div>
+ </strong>
+<div class="col-md-4" style="max-width:100% !important;">
 
-    <div class="col-sm-4">
-
-	<?php get_sidebar(); ?>
+    	<?php get_sidebar(); ?>
 
 
-    </div>
 </div>
 </div>
+</div
+
 
 <?php get_footer(); ?>

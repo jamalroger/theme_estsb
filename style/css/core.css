@@ -4,7 +4,7 @@
 	WordPress generated CSS classes as specified in the theme check guidelines
 	http://make.wordpress.org/themes/guidelines/guidelines-theme-check/
 */
-
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 .alignleft {
 	float: left;
 	}
@@ -37,7 +37,7 @@
 			float:right;
 			padding:15px;
 	}
-	@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+	
 	#cssmenu div,
 	#cssmenu div ul,
 	#cssmenu div ul li,
@@ -68,10 +68,10 @@
 	}
 	#cssmenu div {
 	  font-family: Montserrat, sans-serif;
-		background: #007bff!important;
+/* 		background: #007bff!important; */
 		line-height: 1.5;
 		color:#fff !important;
-		box-shadow:5px 0px 15px #c3c3c3;
+		box-shadow:5px 0px 15px #2e347b;
 	}
 	#cssmenu div > ul > li {
 	  float: left;
@@ -135,8 +135,9 @@
 	  height: 0;
 	}
 	#cssmenu div ul ul {
-	  /* position: absolute; */
+	  position: absolute;
 	  left: -9999px;
+	  z-index:9999;
 	}
 	#cssmenu div.align-right ul ul {
 	  text-align: right;

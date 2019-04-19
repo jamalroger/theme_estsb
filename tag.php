@@ -8,7 +8,7 @@
 <?php get_header(); ?>
 
 
-<div class="container" style="margin-top:15px">
+<div class="container" style="padding-top:15px">
       <div class="row">
 	  <div class="col-sm-8">
 

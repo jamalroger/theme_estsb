@@ -7,7 +7,7 @@
 
 <?php get_header(); ?>
 
-<div  class="container" style="margin-top:30px">
+<div  class="container" style="padding-top:30px">
   <div class="row">
 			<div class="col-md-8">
 

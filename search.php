@@ -7,9 +7,9 @@
 
 <?php get_header(); ?>
 
-<div class="container" style="margin-top:15px">
+<div class="container" style="padding-top:15px">
       <div class="row">
-	  <div class="col-sm-8">
+	  <div class="col-md-8">
 
 <section id="content">
 <?php if (have_posts()) : ?>
@@ -79,7 +79,7 @@ echo get_content();
 
 </div>
 
-<div class="col-sm-4">
+<div class="col-md-4">
 
 <?php get_sidebar(); ?>
 
