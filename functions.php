@@ -163,6 +163,19 @@ if ( ! function_exists( 'estsb_admin' ) ) {
 add_action('admin_menu', 'estsb_add_admin');
 
 
+function my_theme_options( $wp_customize ) {
+	// Sections, settings and controls will be added here
+  $wp_customize->add_section( 
+	'mytheme_footer_options', 
+	array(
+		'title'       => __( 'Footer Settings', 'mytheme' ),
+		'priority'    => 100,
+		'capability'  => 'edit_theme_options',
+		'description' => __('Change footer options here.', 'mytheme'), 
+	) 
+);
+}
+
 // Automatic feed links support
 // http://codex.wordpress.org/Automatic_Feed_Links
 

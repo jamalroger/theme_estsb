@@ -86,7 +86,7 @@ L’Ecole Supérieure de Technologie Sidi Bennour (ESTSB) est un établissement 
 	global $options;
 		echo $option[0]['name'];
 	?> 
-		Powered by Jamal Belharradi <br> Est Sidi Bennour © 2018 - 2019 </div>
+		Powered by ESTSB Students<br> Est Sidi Bennour © 2018 - 2019 </div>
 <!-- to top -->
 <div> <a  id='top' href="#" class="gotopbtn"><i class="fa fa-toggle-up"> </i></a> </div>
 <div>

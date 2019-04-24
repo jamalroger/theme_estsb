@@ -45,6 +45,14 @@
 .td_block_template_1 .block-title {
     text-align: left;
 }
+a:hover {
+	text-decoration: none;
+		
+	}
+a.read-more:hover {
+	color:#fff;
+		
+	}
 .block-title {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
