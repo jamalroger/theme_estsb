@@ -163,6 +163,7 @@ if ( ! function_exists( 'estsb_admin' ) ) {
 add_action('admin_menu', 'estsb_add_admin');
 
 
+
 function my_theme_options( $wp_customize ) {
 	// Sections, settings and controls will be added here
   $wp_customize->add_section( 
@@ -181,6 +182,7 @@ function my_theme_options( $wp_customize ) {
 
 add_theme_support( 'automatic-feed-links' );
 
+add_theme_support( 'custom-logo' );
 
 // Post format support
 // http://codex.wordpress.org/Post_Formats
@@ -724,6 +726,7 @@ function catch_that_image() {
 
   return !empty($first_img) ? $first_img:get_stylesheet_directory_uri()."/img/default.jpg";
 }
+
 function   get_content(){
    global $post, $posts;
 	ob_start();
@@ -738,6 +741,7 @@ function   get_content(){
 function wpb_custom_new_menu() {
   register_nav_menu('my-custom-menu',__( 'Menu top' ));
 }
+
 add_action( 'init', 'wpb_custom_new_menu' );
 
 

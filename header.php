@@ -112,10 +112,11 @@ a.read-more:hover {
 			<div style="background:linear-gradient(90deg,#00c4cc,#7d2ae8)">
 			<div class="container shadow1">
 			    
-				<a href="<?=get_home_url()?>"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" max-with="100%" height="100px"></a>
+				<a href="<?=get_home_url()?>">
+				         <?php the_custom_logo();?>
+				 </a>
 				  <div class="leftm">
 								<?php get_search_form(); ?>	  
-				    
 					</div> 
 				
 				<div id='cssmenu'>

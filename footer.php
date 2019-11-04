@@ -23,14 +23,13 @@
         <div class="col-md-6">
 
           <!-- Content -->
-          <h6 class="text-uppercase font-weight-bold">Ecole Supérieure de Technologie Sidi Bennour </h6>
+          <h6 class="text-uppercase font-weight-bold">Cik club Inforamtique et KnowElgde </h6>
 
           
           <p>
             <i class="fa fa-home mr-3"></i>
-           
-L’Ecole Supérieure de Technologie Sidi Bennour (ESTSB) est un établissement public d’enseignement supérieur à finalité de formation des Techniciens Supérieurs.
-          </p>
+            club Inforamtique et KnowElgde est un club pour partage d'information entre les etudiants qui sont interessé par l'informatique
+          </p> 
 
         </div>
         <!-- Grid column -->
@@ -42,7 +41,7 @@ L’Ecole Supérieure de Technologie Sidi Bennour (ESTSB) est un établissement 
           <h6 class="text-uppercase font-weight-bold">Follows</h6>
    
           <p>
-          <i class="fa fa-facebook" ></i> <a href="#!">Facebook</a>
+          <i class="fa fa-facebook" ></i> <a href="https://web.facebook.com/CIKnENS/">Facebook</a>
           </p>
           <p>
           <i class="fa fa-twitter"></i> <a href="#!">Twitter</a>
@@ -67,9 +66,9 @@ L’Ecole Supérieure de Technologie Sidi Bennour (ESTSB) est un établissement 
           <p>
             <i class="fa fa-home mr-3"></i> Khalil Jabran B.P 299-24000 El jadida Grand-Casablanca Maroc
           <p>
-            <i class="fa fa-envelope mr-3"></i> Email: baddi.y@ucd.ac.ma
+            <i class="fa fa-envelope mr-3"></i> Email: mail@devweb.team
           <p>
-            <i class="fa fa-phone mr-3"></i> + 06 44 92 10 40
+            <i class="fa fa-phone mr-3"></i>  06 75 51 59 06
           <p>
         </div>
         <!-- Grid column -->
@@ -86,7 +85,7 @@ L’Ecole Supérieure de Technologie Sidi Bennour (ESTSB) est un établissement 
 	global $options;
 		echo $option[0]['name'];
 	?> 
-		Powered by ESTSB Students<br> Est Sidi Bennour © 2018 - 2019 </div>
+		Powered by cik Students <br> EEns tetouan © 2018 - 2019 </div>
 <!-- to top -->
 <div> <a  id='top' href="#" class="gotopbtn"><i class="fa fa-toggle-up"> </i></a> </div>
 <div>

@@ -10,7 +10,7 @@
 
 		// Otherwise insert default sidebar elements
 	?>
-		<div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size"> Recherche </span></h4></div>
+		<div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size"> Search </span></h4></div>
 			<?php get_search_form(); ?>
 
 
@@ -47,7 +47,7 @@
 			
 		?>
 
-	<div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size"> Dernier Articles  </span></h4></div>
+	<div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size"> Last articles  </span></h4></div>
 	  <?php if (have_posts()) :  ?>
            <?php  $i=0; while (have_posts() && i<5) : the_post(); ?>
          <div class="items">
@@ -76,10 +76,9 @@
 
 
 	
-	<div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size"> Agenda</span></h4></div>
+	<div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size"> Calendrier </span></h4></div>
 	
 <div class="auto-jsCalendar material-theme blue"></div>
-		<div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size"> Localisation </span></h4></div>
-	
-	 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3339.1186680264973!2d-8.487091376949842!3d33.22772553930262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda91e036ed40d71%3A0xf4a7ddfc3364b7ca!2z2LHYptin2LPYqSDYrNin2YXYudipINi02LnZitioINin2YTYr9mD2KfZhNmKIFByZXNpZGVuY3kgb2YgU2hvYWliIERva2thbGkgVW5pdmVyc2l0eQ!5e0!3m2!1sfr!2sma!4v1555005275508!5m2!1sfr!2sma" width="100%" height="320" frameborder="0" style="border:0"></iframe>
+		<div class="td-block-title-wrap"><h4 class="block-title td-block-title"><span class="td-pulldown-size"> Location </span></h4></div>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.389118192741!2d-5.277214085463545!3d35.61813264103864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b44d117ce801f%3A0x803722067333df9a!2z2KfZhNmF2K_Ysdiz2Kkg2KfZhNi52YTZitinINmE2YTYo9iz2KfYqtiw2Kk!5e0!3m2!1sen!2sma!4v1572908557869!5m2!1sen!2sma" width="100%" height="320" style="border:0;" allowfullscreen=""></iframe>
 	
